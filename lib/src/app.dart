@@ -15,8 +15,8 @@ class App extends StatelessWidget {
         ),
         textTheme: const TextTheme(
           displayLarge: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.normal,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
           ),
           titleLarge: TextStyle(
             fontSize: 25,
@@ -34,7 +34,7 @@ class App extends StatelessWidget {
         fontFamily: GoogleFonts.montserrat().fontFamily,
         useMaterial3: true,
       ),
-      home: WelcomePage(),
+      home: const WelcomePage(),
     );
   }
 }

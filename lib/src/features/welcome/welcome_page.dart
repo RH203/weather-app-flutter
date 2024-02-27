@@ -39,7 +39,13 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Weather App"),
+        title: Text(
+          "Weather App",
+          style: Theme.of(context)
+              .textTheme
+              .displayLarge!
+              .copyWith(color: Theme.of(context).colorScheme.primary),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
