@@ -11,26 +11,30 @@ class App extends StatelessWidget {
       title: "Weather App",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 148, 64, 251),
+          seedColor: const Color(0xFF1F41BB),
         ),
         textTheme: const TextTheme(
-          displayMedium: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w500,
+          displayLarge: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.normal,
           ),
-          titleMedium: TextStyle(
-            fontSize: 19,
-            fontWeight: FontWeight.w500,
+          titleLarge: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.normal,
           ),
           bodyMedium: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+          labelLarge: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
           ),
         ),
+        fontFamily: GoogleFonts.montserrat().fontFamily,
         useMaterial3: true,
-        fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
       ),
-      home: const WelcomePage(),
+      home: WelcomePage(),
     );
   }
 }
