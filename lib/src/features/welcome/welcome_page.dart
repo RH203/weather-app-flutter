@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/src/features/weather/weather_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -22,6 +23,14 @@ class _WelcomePageState extends State<WelcomePage> {
   ];
 
   void _addAnimateImageAndTextWelcome() {
+    if (_index == 2) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => const WeatherPage(),
+        ),
+      );
+      return;
+    }
     setState(() {
       _index++;
       _selected = true;
@@ -54,7 +63,7 @@ class _WelcomePageState extends State<WelcomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             AnimatedSwitcher(
-              duration: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 450),
               child: Image.asset(
                 _imageWelcome[_index],
                 key: ValueKey<int>(_index),
@@ -62,7 +71,7 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
             ),
             AnimatedSwitcher(
-              duration: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 450),
               child: Text(
                 _textWelcome[_index],
                 key: ValueKey<int>(_index),
