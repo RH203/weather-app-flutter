@@ -52,3 +52,4 @@ web/
 windows/
 macos/
 .vscode/
+lib/.env
