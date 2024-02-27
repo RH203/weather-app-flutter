@@ -15,7 +15,11 @@ class _WelcomePageState extends State<WelcomePage> {
     "assets/images/waiting-rain.jpg",
     "assets/images/weather-concept.jpg"
   ];
-  var _textWelcome = ["Welcome ", "Hello", "Weather App"];
+  var _textWelcome = [
+    "Get the latest weather information",
+    "Find accurate and reliable weather forecasts",
+    "Start tracking the weather in your favorite places"
+  ];
 
   void _addAnimateImageAndTextWelcome() {
     setState(() {
@@ -56,6 +60,11 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Text(
                 _textWelcome[_index],
                 key: ValueKey<int>(_index),
+                textAlign: TextAlign.center,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium!
+                    .copyWith(color: Theme.of(context).colorScheme.primary),
               ),
             ),
             Row(
