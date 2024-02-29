@@ -61,7 +61,7 @@ class _WelcomePageState extends State<WelcomePage> {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => const WeatherPage()));
             },
-            child: const Text("Lewati"),
+            child: const Text("Skip"),
           ),
         ],
       ),
