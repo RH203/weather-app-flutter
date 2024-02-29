@@ -53,7 +53,7 @@ class WeatherIconWidget extends StatelessWidget {
       case '09n':
         iconData = WeatherIcons.night_rain_wind;
         break;
-      case '1nd':
+      case '10n':
         iconData = WeatherIcons.night_rain;
         break;
       case '11n':
@@ -71,7 +71,7 @@ class WeatherIconWidget extends StatelessWidget {
     }
     return Icon(
       iconData,
-      size: 200,
+      size: 140,
     );
   }
 }
