@@ -46,7 +46,7 @@ app.*.map.json
 .dart_tool/
 .idea/
 build/
-ios/
+
 linux/
 web/
 windows/
