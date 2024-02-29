@@ -31,7 +31,7 @@ class App extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        fontFamily: GoogleFonts.montserrat().fontFamily,
+        fontFamily: GoogleFonts.poppins().fontFamily,
         useMaterial3: true,
       ),
       home: const WelcomePage(),
