@@ -55,6 +55,15 @@ class _WelcomePageState extends State<WelcomePage> {
               .displayLarge!
               .copyWith(color: Theme.of(context).colorScheme.primary),
         ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const WeatherPage()));
+            },
+            child: const Text("Lewati"),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
