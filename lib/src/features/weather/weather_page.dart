@@ -70,6 +70,9 @@ class _WeatherPageState extends State<WeatherPage> {
             _isLoadingOnTap = true;
           });
 
+          FocusScope.of(context).unfocus();
+          FocusScope.of(context).requestFocus(FocusNode());
+
           _focusNode.requestFocus();
           Provider.of<WeatherProvider>(context, listen: false)
               .fetchWeather(_nameCity.text);
@@ -85,6 +88,8 @@ class _WeatherPageState extends State<WeatherPage> {
           inAsyncCall: weatherProvider.isLoadingAnimation,
           progressIndicator: LoadingAnimationWidget.discreteCircle(
             color: const Color(0xffffffff),
+            secondRingColor: const Color.fromARGB(255, 46, 159, 204),
+            thirdRingColor: const Color.fromARGB(255, 46, 96, 204),
             size: 100,
           ),
           child: Scaffold(
