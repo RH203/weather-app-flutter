@@ -6,11 +6,14 @@ import 'package:http/http.dart' as http;
 
 class WeatherProvider extends ChangeNotifier {
   WeatherModels? _currentWeather;
+  bool _isLoadingAnimation = false;
 
   WeatherModels? get currentWeather => _currentWeather;
+  bool get isLoadingAnimation => _isLoadingAnimation;
 
   Future<void> fetchWeather(String cityName) async {
     try {
+      _isLoadingAnimation = true;
       final url =
           "https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${dotenv.env["API_KEY_WEATHER"]}";
 
@@ -24,6 +27,8 @@ class WeatherProvider extends ChangeNotifier {
       }
     } catch (e) {
       print("Error PROVIDER: $e");
+    } finally {
+      _isLoadingAnimation = false;
     }
   }
 }

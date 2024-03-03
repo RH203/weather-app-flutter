@@ -75,15 +75,18 @@ class _WeatherPageState extends State<WeatherPage> {
               .fetchWeather(_nameCity.text);
         }
 
-        Future.delayed(new Duration(seconds: 4), () {
+        Future.delayed(const Duration(seconds: 4), () {
           setState(() {
             _isLoadingOnTap = false;
           });
         });
 
         return ModalProgressHUD(
-          inAsyncCall: _isLoadingOnTap,
-          progressIndicator: _isLoadingAnimationSuccess(),
+          inAsyncCall: weatherProvider.isLoadingAnimation,
+          progressIndicator: LoadingAnimationWidget.discreteCircle(
+            color: const Color(0xffffffff),
+            size: 100,
+          ),
           child: Scaffold(
             appBar: AppBar(
               leading: IconButton(

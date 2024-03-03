@@ -10,6 +10,7 @@ Future main() async {
   runApp(
     ChangeNotifierProvider(
       create: (_) => WeatherProvider(),
+      
       child: const App(),
     ),
   );

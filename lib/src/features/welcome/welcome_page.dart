@@ -9,14 +9,13 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-  bool _selected = false;
   var _index = 0;
-  var _imageWelcome = [
+  final _imageWelcome = [
     "assets/images/fall-is-coming.jpg",
     "assets/images/waiting-rain.jpg",
     "assets/images/weather-concept.jpg"
   ];
-  var _textWelcome = [
+  final _textWelcome = [
     "Get the latest weather information",
     "Find accurate and reliable weather forecasts",
     "Start tracking the weather in your favorite places"
@@ -33,14 +32,12 @@ class _WelcomePageState extends State<WelcomePage> {
     }
     setState(() {
       _index++;
-      _selected = true;
     });
   }
 
   void _decrementAnimateImageAndTextWelcome() {
     setState(() {
       _index--;
-      _selected = false;
     });
   }
 
