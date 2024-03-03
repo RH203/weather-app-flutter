@@ -71,7 +71,7 @@ class WeatherIconWidget extends StatelessWidget {
     }
     return Icon(
       iconData,
-      size: 140,
+      size: 100,
     );
   }
 }

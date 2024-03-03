@@ -179,7 +179,7 @@ class _WeatherPageState extends State<WeatherPage> {
                                       .labelLarge!
                                       .copyWith(
                                         color: const Color(0xffFCFCFD),
-                                        fontSize: 35,
+                                        fontSize: 30,
                                       ),
                                 ),
                                 child: Text(
@@ -189,7 +189,7 @@ class _WeatherPageState extends State<WeatherPage> {
                                       .labelLarge!
                                       .copyWith(
                                         color: const Color(0xffFCFCFD),
-                                        fontSize: 45,
+                                        fontSize: 30,
                                       ),
                                 ),
                               ),
@@ -237,7 +237,7 @@ class _WeatherPageState extends State<WeatherPage> {
                                               .labelLarge!
                                               .copyWith(
                                                 color: const Color(0xffFCFCFD),
-                                                fontSize: 40,
+                                                fontSize: 35,
                                               ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -246,7 +246,7 @@ class _WeatherPageState extends State<WeatherPage> {
                                               right: 0, bottom: 25),
                                           child: Icon(
                                             WeatherIcons.celsius,
-                                            size: 70,
+                                            size: 60,
                                             color: Color.fromARGB(
                                                 255, 212, 212, 216),
                                           ),
@@ -264,7 +264,7 @@ class _WeatherPageState extends State<WeatherPage> {
                                               .labelLarge!
                                               .copyWith(
                                                 color: const Color(0xffFCFCFD),
-                                                fontSize: 40,
+                                                fontSize: 35,
                                               ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -273,7 +273,7 @@ class _WeatherPageState extends State<WeatherPage> {
                                               left: 10, bottom: 25),
                                           child: Icon(
                                             WeatherIcons.humidity,
-                                            size: 50,
+                                            size: 40,
                                             color: Color.fromARGB(
                                                 255, 212, 212, 216),
                                           ),
@@ -289,9 +289,9 @@ class _WeatherPageState extends State<WeatherPage> {
                       ),
                     ),
                     Expanded(
-                      child: Padding(
-                        padding:
-                            const EdgeInsets.only(top: 17, left: 8, right: 8),
+                      child: Container(
+                        margin:
+                            const EdgeInsets.only(top: 40, left: 8, right: 8),
                         child: Container(
                           width: double.infinity,
                           height: double.minPositive,

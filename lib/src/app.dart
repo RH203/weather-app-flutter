@@ -9,6 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Weather App",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF1F41BB),
@@ -35,6 +36,7 @@ class App extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const WelcomePage(),
+      
     );
   }
 }
